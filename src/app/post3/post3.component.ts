@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
     </div>`,
   styles: [`
     .Post3 {
-      padding: .5rem;
-      border: 2px solid black;
-      width: 500px;
+      padding: .1rem;
+      border: 2px solid darkgray;
+      width: 450px;
     }
 
     h2 {
@@ -20,6 +20,4 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class Post3Component {
-
-}
+export class Post3Component {}
