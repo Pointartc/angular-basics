@@ -18,4 +18,20 @@ export class AppComponent {
       this.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/240px-Angular_full_color_logo.svg.png'
     }, 5000)
   }
+
+  inputValue = '';
+
+  onInput(event: Event) {
+    console.log('event ==>', event)
+    this.inputValue = (<HTMLInputElement>event.target).value
+
+  }
+
+  onClick() {
+    console.log('click ==>')
+  }
+
+  onBlur(str: string) {
+    this.inputValue = str
+  }
 }

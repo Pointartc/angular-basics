@@ -13,3 +13,8 @@
 <app-post></app-post>
 <hr>
 <app-post3></app-post3>
+<hr>
+<button (click)="onClick()">click me!!</button>
+<!--<input type="text" (keyup.enter)="onInput($event)">-->
+<input type="text" (keyup.enter)="onInput($event)" (blur)="onBlur(MyInput.value)" #MyInput>
+<p><strong>{{inputValue}}</strong></p>
