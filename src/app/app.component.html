@@ -1,5 +1,75 @@
 <h1>Hello World</h1>
 <hr>
-<!--<input type="text" [value]="title" (input)="OnInput($event)">-->
-<input type="text" [(ngModel)]="title">
-<p>{{title}}</p>
+<app-post></app-post>
+<hr>
+<app-post2></app-post2>
+<hr>
+<app-post3></app-post3>
+<hr>
+<!--<p>{{title}}</p>-->
+<!--<p><strong>{{number - 2}}</strong></p>-->
+<!--<p>{{arr}}</p>-->
+<!--<p>{{obj.b.c}}</p>-->
+<!--<p>{{40 + 2}}</p>-->
+<!--<p>{{'hello' + ' world'}}</p>-->
+<!--<hr>-->
+<!--<img [src]="img" alt="">-->
+<!--<hr>-->
+<!--<input type="text" (input)="onInput($event)">-->
+<!--<input type="text" (keyup.enter)="onInput($event)" (blur)="onBlur(myInput.value)" #myInput>-->
+<!--<p><strong>{{initValue}}</strong></p>-->
+<!--<button (click)="onClick()">click me!!!</button>-->
+<!--<hr>-->
+<!--<input type="text" [value]="title" (input)="onInput($event)">-->
+<!--<input type="text" [(ngModel)]="title">-->
+<!--<p><strong>{{title}}</strong></p>-->
+<!--<hr>-->
+<!--<button (click)="toggle = !toggle">Toggle</button>-->
+<!--<button (click)="toggle = 111">click 111</button>-->
+<!--<div [ngStyle]="{-->
+<!--width: '200px',-->
+<!--height: '200px',-->
+<!--border: 'solid black 2px',-->
+<!--borderRadius: '10px',-->
+<!--background : backgroundToggle ? 'darkRed' : 'darkGray'-->
+<!--}">-->
+<!--</div>-->
+
+<!--<p [ngClass]="{red: backgroundToggle, blue: !backgroundToggle}">Lorem ipsum dolor sit amet, consectetur adipisicing-->
+<!--  elit. Hic, nemo.</p>-->
+
+<!--<p [class.red]="backgroundToggle"-->
+<!--   [class.blue]="!backgroundToggle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, suscipit!</p>-->
+<!--<p *ngIf="toggle; else blueP" class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime,-->
+<!--  molestias?</p>-->
+<!--<ng-template #blueP>-->
+<!--  <p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, maiores?</p>-->
+<!--&lt;!&ndash;</ng-template>&ndash;&gt;-->
+<!--<div [ngSwitch]="toggle">-->
+<!--  <p *ngSwitchCase="true" class="red"> Lorem ipsum dolor sit amet.</p>-->
+<!--  <p *ngSwitchCase="false" class="blue">Lorem ipsum dolor sit amet.</p>-->
+<!--  <p *ngSwitchDefault>Lorem ipsum dolor sit amet.</p>-->
+<!--</div>-->
+
+<ul>
+  <li *ngFor="let n of arr; let idx = index">
+    {{idx}}<strong>{{n}}</strong>
+  </li>
+</ul>
+<hr>
+<ul>
+  <li *ngFor="let post of obj">
+    <strong><p>{{post.title}}<b>{{post.author}}</b></p></strong>
+    <ul>
+      <li *ngFor="let comment of post.comments">
+        <div class="">
+          <small>{{comment.name}}</small>
+          <p>{{comment.text}}</p>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<p>{{nowTime | date | uppercase}}</p>
+
